@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-flow: space-between;
+  height: 100vh;
+  width: 100%;
+  background-color: darkslategray;
+}
+
+.cards-wrapper {
+  display: flex;
+  width: 70%;
+  padding-left: 20px;
+}
+
+.deck-wrapper {
+  width: 30%;
+}
+
+.tarot-deck {
+  border: 1px solid black;
+  height: 200px;
+  width: 150px;
+  margin: 100px 0 0 0;
+  background-color: maroon;
+  cursor: pointer;
+}
+
+
+
+.card {
+  border: 1px solid black;
+  height: 200px;
+  width: 150px;
+  margin: 100px 5px 0 5px;
+  background-color: maroon;
+}
