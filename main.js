@@ -97,13 +97,22 @@ $(function () {
   $('.tarot-deck').on('click', function () {
     $('.cards-wrapper').empty();
 
+    let usedCard = [];
+
     for (let i = 0; i < 3; i++) {
       let randomNum = getRandomArbitrary(0, 11);
-      const card = $('<div>', {
-        class: 'card',
-        html: cardArray[randomNum].name,
-      });
-      $('.cards-wrapper').append(card);
+      console.log(cardArray[randomNum]);
+
+      if (usedCard.includes(randomNum)) {
+        //then "redraw" card
+      } else {
+        const card = $('<div>', {
+          class: 'card',
+          html: cardArray[randomNum].name,
+        });
+        $('.cards-wrapper').append(card);
+        usedCard.push(randomNum);
+      }
     }
   });
 });
